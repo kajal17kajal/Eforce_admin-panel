@@ -1,0 +1,675 @@
+/*=========== Common CSS ==========*/
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Inter';
+	font-size:14px;
+	font-weight:400;
+	line-height:25px;
+	box-sizing:border-box;
+  color: #001429;
+}
+p{
+  color: #787878;
+  margin-bottom: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+h1{
+	font-size:48px;
+	line-height:55px;
+	font-weight:700;
+  
+}
+h2{
+	font-size:36px;
+	line-height:55px;
+	font-weight:700;
+}
+h3{
+	font-size:26px;
+	line-height:26px;
+	font-weight:600;
+}
+h4{
+	font-size:24px;
+	line-height:29px;
+	font-weight:500;
+}
+h5{
+	font-size:18px;
+	line-height:25px;
+	font-weight:600;
+}
+h6{
+	font-size:16px;
+	line-height:18px;
+	font-weight:600;
+}
+p{
+	color:inherit;
+}
+
+label{
+	text-transform: capitalize;
+}
+ul,ol{
+	padding-left: 0;
+  margin-bottom: 0;
+}
+ul > li{
+	list-style-type: none;
+
+}
+a{
+  text-transform: capitalize;
+  text-decoration: none;
+  display: inline-block;
+  color: #001429;
+}
+a:hover{
+  color: #001429 ;
+}
+button{
+  background-color: transparent;
+  border: none;
+}
+.form-select{
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.btn_primary{
+  padding: 9px 12px;
+  background-color:#D3E7F8;
+  color:#001429;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  line-height: 18px;
+  
+}
+.btn_primary:hover{
+  background-color: #A7CFF1;
+}
+.searchbox{
+  border-radius: 4px;
+  border: 1px solid #D0D0D0;
+  position: relative;
+}
+address{
+  color:#787878;
+}
+
+/*=========== Start sidebar CSS ==========*/
+#map{
+  position: relative;
+  height: 100vh;
+}
+.dashboard_truck{
+  background-color: #001429;
+  height: calc(100vh - 10px);
+  position: absolute;
+  z-index: 100;
+  left: 10px;
+   top: 10px;
+   width: 250px;
+   margin: 0;
+   padding: 0;
+   border-radius: 4px;
+   display: flex;
+   flex-direction: column;
+   bottom: 10px;
+   transition:width .6s ease;
+    flex: 1;
+}
+
+.dashboard_truck  #menu_toggle{
+  display: flex;
+  padding: 20px;
+}
+.dashboard_truck #pushmenu{
+  align-self: center;
+  
+}
+ .content{
+  margin-left:16px;
+ 
+}
+.sidebar-collapse .dashboard_truck{	
+	width:72px;
+  overflow-x: hidden;
+	
+}
+.sidebar-collapse .content,
+.sidebar-collapse .logo{
+  display: none;  
+  margin-left: 0;
+}
+.nav-pills .nav-link{display: flex; justify-content: flex-start;align-items: center;}
+
+.sidebar-collapse #eforce_detail{
+	margin-left:-178px;
+	
+}
+.dashboard_truck .border-bottom{
+  color: #A6A6A6;
+}
+ .icon{
+  width:25px;
+  height:25px;
+  display:flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #285E61;
+}
+.dashboard_truck .main-sidemenu ul>li>a:hover{
+  background-color: #006FBB;
+  border-radius: 4px; 
+}
+ .name_icon{
+  padding: 20px;
+  display: flex;
+}
+/*=========== End sidebar CSS ==========*/
+/*=========== Start header CSS ==========*/
+header .navbar{
+  display: flex;
+  justify-content: space-between;
+  background-color: #001429;
+  width: 100%;
+   position:fixed;
+   top: 0;
+  padding: 10px;
+}
+.navbar-expand .navbar-toggler{
+  display: block;
+}
+header .dash_truck{
+  background-color:#001429;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  height: 100vh;
+  flex-direction: column;
+  position: absolute;
+  top:0;
+  left: -270px;
+  transition:width .6s ease;
+  display: none;
+}
+.side-collapse .dash_truck{
+  left: 0px;
+  transition:width .6s ease;
+}
+header .dash_truck.side-expand{
+  display: block;
+  left: -10px;
+  transition:width .6s ease;
+}
+header .dash_truck .text{
+  text-align: right;
+  padding: 0 20px 0 0;
+}
+/* .side-expand .eforce_detail{
+  left: -260px;
+  width: 100%;
+} */
+/*=========== End header CSS ==========*/
+
+/*=========== Start eforce detail section CSS ==========*/
+#eforce_detail{
+  position: absolute;
+  left: 270px;
+  top:0;
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 10px);
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+  transition: all ease 0.5s;
+  display: block;
+  opacity: 0;
+}
+.sidebar-open #dash_truck {
+  transform: translateX(0);
+}
+
+.drawer-open #eforce_detail {
+  transform: translateX(0);
+}
+#eforce_detail .nav .nav-item .nav-link{
+  color: #A6A6A6;
+}
+#eforce_detail a:hover{
+  background-color: rgba(250, 250, 250, 1);
+}
+#eforce_detail .nav .nav-item .active  {
+  color: #001429;
+}
+#eforce_detail .nav .nav-item {
+  width: calc(100%/3);
+text-align: center;
+}
+#eforce_detail .nav .nav-item:nth-child(3){
+  margin-right: 0;
+}
+#eforce_detail .summary{
+  margin-bottom:20px;
+  display: flex;
+}
+#eforce_detail .summary .all{
+  border:1px solid #D0D0D0;
+  min-width: 70px;
+  width: 100%;
+  padding: 10px 0;
+  border-right: 0;
+}
+#eforce_detail .add_vehicle{
+  margin: 0 20px 25px 20px;
+}
+ .input-group .searchbtn{
+  position: absolute;
+  right: 0;
+}
+.vehicle_list {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+#eforce_detail .truck {
+  width: 100%;}
+#eforce_detail .truck .truck_detail{
+  padding: 10px 20px;
+  width: 100%;
+  border-bottom: 1px solid #D0D0D0;
+}
+.dot_stop,.dot_active{
+  background-color: #FFA200;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 6px;
+}
+.dot_active{
+  background-color: #38A169;
+}
+
+input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control, .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select, .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#eforce_detail .truck p, .eforce_detail .truck address{
+  margin-bottom: 0;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: transparent;
+  border-color: transparent transparent #f3f3f3;
+  border-bottom: 1px solid #151515 !important;
+}
+#eforce_detail .nav .nav-item .active path{
+  fill: #001429;
+}
+/* .mscroll{
+  height: 580px;
+ overflow-y: auto;
+}  */
+/*=========== End eforce detail section CSS ==========*/
+
+/*=========== Start vehicle detail section CSS ==========*/
+.vehicle_details.side-open{
+  width:0px;
+}
+.vehicle_details.side-open .right_sidebar{
+  right: 0;
+  transform: rotate(180deg);
+  transition: all ease 0.5s;
+}
+.right_content{
+  display: none;
+  transition: width 0.5s ease;
+}
+ .right_content .right_sidebar{
+  background-color: #001429;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 400px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;  
+  transition: width 0.5s ease;
+}
+.right_content .vehicle_details{
+  background-color: #fff;
+  min-height: calc(100vh-10px);
+  position: absolute;
+  z-index: 1;
+  right: 0px;
+   top: 10px;
+   /* width: 100%; */
+   margin: 0;
+   /* padding: 15px; */
+   border-radius: 4px;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   height: 100%;
+   transition: all ease 0.5s;
+   
+}
+.right_content  .vehicle_details .vehicle_number{
+  padding:13px;
+}
+.right_content .vehicle_details .driver_detail{
+  padding: 18px 20px;
+  display: flex;
+}
+.right_content .vehicle_details .driver_detail .driver_pic img{
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+}
+.right_content .vehicle_details .driver_detail .driver_pic{
+  line-height: 19px;
+  font-weight: 500;
+}
+.right_content .vehicle_details .location{
+  padding: 20px;
+}
+.right_content .vehicle_details .location .join_btn .btn_primary{
+  padding: 5px 15px;
+}
+.right_content .vehicle_details .activity{
+  padding: 10px 20px;
+}
+.right_content .vehicle_details .activity p{
+  font-weight: 600;
+  
+}
+.right_content .vehicle_details .speed{
+  padding: 20px;
+}
+.right_content .vehicle_details .speed .avg_speed{
+  padding: 6px 10px ;
+  background: #001429;
+  border-radius: 4px;
+  color: #fff;
+}
+.right_content .vehicle_details .speed .max_speed{
+  padding: 6px 10px ;
+  background:rgba(244, 43, 43, 0.5);
+  border-radius: 4px;
+  color: #F42B2B;
+}
+.right_content .vehicle_details .alert{
+  padding: 20px;
+}
+.right_content .vehicle_details .alert .btn_primary{
+  padding: 5px 20px;
+}
+
+.arrow{
+  background-color: #001429;
+  width: 50px;
+  height: 50px;
+  
+}
+/*=========== End vehicle detail section CSS ==========*/
+
+/*=========== Start Driver detail section CSS ==========*/
+.driver_list .drivers .left_detail .driver_img{
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.driver_list .drivers .driver_detail{
+  padding: 20px 20px 20px 10px;
+}
+/*=========== End Driver detail section CSS ==========*/
+
+/*=========== Start Modal vehicle detail section CSS ==========*/
+#addvehicle .modal-header,#add_driver .modal-header,#add_company .modal-header,#geofence .modal-header, #edit_profile .modal-header{
+  border-bottom: 0;
+  padding: 0;
+  margin: 20px 20px 0 0;
+}
+.modal .nav-item a{
+  color: #D0D0D0;
+}
+.modal .modal-heder{
+  text-align: right;
+  
+}
+.nav-tabs .nav-link.active {
+  color: #001429;
+}
+.modal .form-check-input:checked{
+  background-color: #D3E7F8;
+border-color: transparent;
+color:  #155284;
+}
+.modal .form-check-input[type="checkbox"]{
+  border-radius: 2px;
+}
+.modal .form-check-input{
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+#addvehicle .tab_detail,#add_driver .driver_add,#add_company .company_add,#geofence .geo,#edit_profile .edit{
+  padding: 0 40px;
+}
+.modal .btn-close{
+  background-color: #D3E7F8;
+  height: 30px;
+  width: 30px;
+  border-radius: 6px;
+  opacity: 1;
+  padding: 6px;
+}
+.modal .submit_btn{
+  text-align: right;
+  margin:40px 20px;
+}
+.modal .submit_btn .btn_primary{
+  padding: 10px 60px;
+}
+/*=========== End Modal vehicle detail section CSS ==========*/
+
+/*=========== Chart =====================*/
+.chart{
+  padding:20px 20px 36px 20px;
+
+}
+.chart .temperature, .chart .pressure{
+  background: #F7FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 4px;
+  display: block;
+  width: 120px;
+  height: 120px;
+  font-weight: 600;
+  position: relative;
+  padding: 8px 0 0 0;
+}
+canvas {
+  position: absolute;
+}
+.percent {
+ position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 12px;
+    bottom: 19px;
+    
+}
+.range_left{
+  position: absolute;
+  left: 18px;
+  font-size: 12px;
+  bottom: 5px;
+}
+.range_right{
+position: absolute;
+right: 14px;
+font-size: 12px;
+bottom: 5px;
+}
+.chartjs-render-monitor{
+width: 150px;
+height: 80px;
+}
+/*=========== Chart =====================*/
+
+/*=========== Start playback section CSS ==========*/
+.playback{
+  position: absolute;
+  top: 10px;
+  right:500px;
+ display: none;
+}
+.playback .dropdown .btn_primary{
+  background-color: #A7CFF1;
+  border: none ;
+}
+.playback .dropdown-toggle::before{
+  display: inline-block;
+margin-left: .255em;
+vertical-align: .255em;
+content: "";
+border-top: 6px solid;
+border-right: 6px solid transparent;
+border-bottom: 0;
+border-left: 6px solid transparent;
+transform: rotate(-90deg);
+}
+.playback .dropdown-toggle::after{
+  display: none;
+}
+/*=========== End playback section CSS ==========*/
+.box.has-advanced-upload {
+  background-color: white;
+  outline: 1px dashed black;
+  outline-offset: 3px;
+}
+/*=========== Start geofence section CSS ==========*/
+.geofence_info{
+  padding: 20px;
+}
+.search_btn .searchbtn{
+  right: 10px;
+}
+.dot_info{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 20px;
+  align-self: center;
+}
+ .search_btn{
+  padding: 20px 19px 8px 20px ;
+}
+/*=========== End geofence section CSS ==========*/
+
+/*=========== Start Company management CSS ==========*/
+#company_management{
+  position: absolute;
+  left: 269px;
+  top: 10px;
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 10px);
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+  transition: all ease 0.5s;
+  display: block;
+  opacity: 0;
+}
+.c_information{
+  padding: 0 0 50px 0;
+}
+#company_management .c_info{
+  padding: 20px 20px 0 20px;
+}
+#company_management h5{
+  margin-right: 50px;
+}
+.sidebar-collapse #company_management{
+	margin-left:-178px;
+}
+#company_management .nameicon{
+  width:40px;
+  height:40px;
+  display:flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #285E61;
+}
+#company_management .n_icon{
+  padding: 20px;
+}
+#company_management .company_info a:hover{
+  background-color: rgba(250, 250, 250, 1);
+}
+/*=========== End Company management CSS ==========*/
+/*=========== Start Company Profile CSS ==========*/
+#company_profile{
+ position: absolute;
+  padding: 20px 0;
+  left: 269px;
+  top: 10px;
+  margin: 0;
+  width: 440px;
+  min-height: calc(100vh - 10px);
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 100%;
+  transition: all ease 0.5s;
+}
+ .profile{
+  background-color: #285E61;
+  width: 140px;
+  height: 140px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#company_profile{
+  display: none;
+}
+.sidebar-collapse #company_profile{
+	margin-left:-178px;
+}
+.previous-collapse #company_management{
+  display: block;
+}
+/*=========== End Company Profile CSS ==========*/
+.page{
+  display: none;
+}
+
+/*=============offcanvas========================*/
+.offcanvas{
+  --bs-offcanvas-height: 90vh;
+}
